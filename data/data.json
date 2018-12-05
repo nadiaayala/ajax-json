@@ -1,0 +1,7 @@
+{
+    "events" :
+    [
+        {"location": "San Francisco", "Date": "June 4", "map":"img/map-ca.png"},
+        {"location": "Austin", "Date": "June 4", "map":"img/map-tx.png"}
+    ]
+}
