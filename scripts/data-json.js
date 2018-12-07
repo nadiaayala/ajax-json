@@ -1,9 +1,9 @@
-var eu = 'a';
 var btn = document.getElementById("bus06");
 var divBus = document.getElementsByClassName('bus-times')[0];
-
-
-    btn.addEventListener('click', function () {
+//Checks wether the bus times div is showing or not.
+btn.addEventListener('click', function () {
+    if (divBus.classList.contains('hide')) {
+        divBus.classList.remove('hide');
         divBus.className = "show";
         var request = new XMLHttpRequest;
         request.onload = function () {
@@ -21,6 +21,10 @@ var divBus = document.getElementsByClassName('bus-times')[0];
         };
         request.open('GET', 'data/data.json', true);
         request.send(null);
-
+    }
+    else {
+        divBus.classList.remove('show');
+        divBus.className = 'hide';
+    }
 })
 
